@@ -8,7 +8,7 @@
             <!--- 
             <div style="text-align:right;">
                 <button type="button" class="btn btn-success waves-effect waves-light"
-                        onClick=" window.location.href='/measurementcreate' " style="text-align:center;">+
+                        onClick=" window.location.href='/historiacreate' " style="text-align:center;">+
                 </button>
             </div>
             --->
@@ -35,13 +35,13 @@
                         </thead>
                         <tbody>
 
-                        {% for measurement in measurement_list %}
+                        {% for historia in historia_list %}
                         <tr>
-                            <td>{{ measurement.patient.name }}</td>
-                            <td>{{ measurement.value }}</td>
-                            <td>{{ measurement.unit }}</td>
-                            <td>{{ measurement.place }}</td>
-                            <td>{{ measurement.dateTime }}</td>
+                            <td>{{ historia.patient.name }}</td>
+                            <td>{{ historia.value }}</td>
+                            <td>{{ historia.unit }}</td>
+                            <td>{{ historia.place }}</td>
+                            <td>{{ historia.dateTime }}</td>
                         </tr>
                         {% endfor %}
 

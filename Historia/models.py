@@ -1,7 +1,7 @@
 from django.db import models
 from patients.models import Patient
 
-class Measurement(models.Model):
+class Historia(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, default=None)
     value = models.FloatField(null=True, blank=True, default=None)
     unit = models.CharField(max_length=50)

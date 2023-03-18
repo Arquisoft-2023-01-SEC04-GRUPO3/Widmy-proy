@@ -5,6 +5,6 @@ def get_patients():
     return (queryset)
 
 def create_patient(form):
-    measurement = form.save()
-    measurement.save()
+    historia = form.save()
+    historia.save()
     return ()
