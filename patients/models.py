@@ -1,6 +1,6 @@
 from django.db import models
 
-class Variable(models.Model):
+class Patient(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     blood_type = models.CharField(max_length=3)
