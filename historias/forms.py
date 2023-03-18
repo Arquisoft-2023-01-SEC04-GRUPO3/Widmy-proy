@@ -7,8 +7,8 @@ class HistoriaForm(forms.ModelForm):
         fields = [
             'patient',
             'doctor',
-            'motive',
             'description',
+            'place',
             'diagnosis'
             #'dateTime',
         ]
@@ -16,7 +16,7 @@ class HistoriaForm(forms.ModelForm):
         labels = {
             'patient' : 'Patient',
             'doctor' : 'Doctor',
-            'motive' : 'Motive',
+            'place' : 'Place',
             'description' : 'Description',
             'diagnosis' : 'Diagnosis',
             #'dateTime' : 'Date Time',

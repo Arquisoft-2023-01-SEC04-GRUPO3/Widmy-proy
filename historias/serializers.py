@@ -5,5 +5,5 @@ from . import models
 class HistoriaSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('id', 'patient', 'doctor', 'motive', 'description', 'diagnosis', 'dateTime')
+        fields = ('id', 'patient', 'doctor', 'place', 'description', 'diagnosis', 'dateTime')
         model = models.Historia

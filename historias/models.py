@@ -10,4 +10,4 @@ class Historia(models.Model):
     diagnosis = models.CharField(max_length=50,default=None)
 
     def __str__(self):
-        return '%s %s' % (self.patient, self.motive)
+        return '%s %s' % (self.patient, self.diagnosis)
