@@ -2,29 +2,29 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .forms import VariableForm
-from .logic.variable_logic import get_variables, create_variable
+from .forms import PatientForm
+from .logic.patient_logic import get_patients, create_patient
 
-def variable_list(request):
-    variables = get_variables()
+def patient_list(request):
+    patients = get_patients()
     context = {
-        'variable_list': variables
+        'patient_list': patients
     }
-    return render(request, 'Variable/variables.html', context)
+    return render(request, 'Patient/patients.html', context)
 
-def variable_create(request):
+def patient_create(request):
     if request.method == 'POST':
-        form = VariableForm(request.POST)
+        form = PatientForm(request.POST)
         if form.is_valid():
-            create_variable(form)
-            messages.add_message(request, messages.SUCCESS, 'Successfully created variable')
-            return HttpResponseRedirect(reverse('variableCreate'))
+            create_patient(form)
+            messages.add_message(request, messages.SUCCESS, 'Successfully created patient')
+            return HttpResponseRedirect(reverse('patientCreate'))
         else:
             print(form.errors)
     else:
-        form = VariableForm()
+        form = PatientForm()
 
     context = {
         'form': form,
     }
-    return render(request, 'Variable/variableCreate.html', context)
+    return render(request, 'Patient/patientCreate.html', context)

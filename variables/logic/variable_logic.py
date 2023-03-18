@@ -1,10 +1,10 @@
-from ..models import Variable
+from ..models import Patient
 
-def get_variables():
-    queryset = Variable.objects.all()
+def get_patients():
+    queryset = Patient.objects.all()
     return (queryset)
 
-def create_variable(form):
+def create_patient(form):
     measurement = form.save()
     measurement.save()
     return ()

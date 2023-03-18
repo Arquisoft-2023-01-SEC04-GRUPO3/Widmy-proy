@@ -1,9 +1,9 @@
 from django import forms
-from .models import Variable
+from .models import Patient
 
-class VariableForm(forms.ModelForm):
+class PatientForm(forms.ModelForm):
     class Meta:
-        model = Variable
+        model = Patient
         fields = [
             'name',
         ]

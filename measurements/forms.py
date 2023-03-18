@@ -5,7 +5,7 @@ class MeasurementForm(forms.ModelForm):
     class Meta:
         model = Measurement
         fields = [
-            'variable',
+            'patient',
             'value',
             'unit',
             'place',
@@ -13,7 +13,7 @@ class MeasurementForm(forms.ModelForm):
         ]
 
         labels = {
-            'variable' : 'Variable',
+            'patient' : 'Patient',
             'value' : 'Value',
             'unit' : 'Unit',
             'place' : 'Place',
