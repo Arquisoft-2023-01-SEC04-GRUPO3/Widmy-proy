@@ -27,8 +27,8 @@
                         <thead>
                         <tr style="color:#0E2EB0">
                             <th font color="red">Patient</th>
-                            <th>Value</th>
-                            <th>Unit</th>
+                            <th>Doctor</th>
+                            <th>Diagnosis</th>
                             <th>Place</th>
                             <th>Date Time</th>
                         </tr>
@@ -38,8 +38,8 @@
                         {% for historia in historia_list %}
                         <tr>
                             <td>{{ historia.patient.name }}</td>
-                            <td>{{ historia.value }}</td>
-                            <td>{{ historia.unit }}</td>
+                            <td>{{ historia.doctor }}</td>
+                            <td>{{ historia.diagnosis }}</td>
                             <td>{{ historia.place }}</td>
                             <td>{{ historia.dateTime }}</td>
                         </tr>
