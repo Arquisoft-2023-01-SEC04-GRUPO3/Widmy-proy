@@ -5,5 +5,5 @@ from . import models
 class MeasurementSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('id', 'patient', 'value', 'unit', 'place', 'time',)
+        fields = ('id', 'variable', 'value', 'unit', 'place', 'time',)
         model = models.Measurement
